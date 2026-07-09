@@ -47,7 +47,7 @@ export default function WeightCalculatorPage() {
           </div>
           <Select 
             value={activeProfileIndex.toString()} 
-            onValueChange={(val) => setActiveProfileIndex(parseInt(val))}
+            onValueChange={(val) => setActiveProfileIndex(parseInt(val || "0"))}
           >
             <SelectTrigger className="w-[180px] bg-background/50">
               <SelectValue placeholder="Select Airline" />

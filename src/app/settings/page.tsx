@@ -71,7 +71,7 @@ export default function SettingsPage() {
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <label className="text-sm font-medium">Theme</label>
-              <Select value={theme} onValueChange={setTheme}>
+              <Select value={theme} onValueChange={(val) => setTheme(val || "system")}>
                 <SelectTrigger className="w-full bg-background/50">
                   <SelectValue placeholder="Select theme" />
                 </SelectTrigger>

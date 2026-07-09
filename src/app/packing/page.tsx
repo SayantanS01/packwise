@@ -61,7 +61,7 @@ export default function PackingPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <Select value={filterCategory} onValueChange={setFilterCategory}>
+        <Select value={filterCategory} onValueChange={(val) => setFilterCategory(val || "All")}>
           <SelectTrigger className="w-full sm:w-[200px] bg-background/50 border-border/50">
             <Filter className="mr-2 size-4 text-muted-foreground" />
             <SelectValue placeholder="Category" />
